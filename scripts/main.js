@@ -1,12 +1,14 @@
 
 import { fetchAgents, fetchBusinesses } from "./dataAccess.js";
 import {MainHTML} from "./dothardSimbleton.js"
+import { NavBar } from "./NavBar.js";
 import "./businessTextSearch.js"
 const mainContainer = document.querySelector(".main")
-
+const headerContainer = document.querySelector("#header")
 const render = () =>{
     fetchAgents()
     fetchBusinesses().then(() =>{
+        headerContainer.innerHTML = NavBar();
         mainContainer.innerHTML = MainHTML()
     })
     

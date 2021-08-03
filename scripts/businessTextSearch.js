@@ -7,7 +7,7 @@ export const FoundBusinessDetailed = (businessObject, agentObject)=>{
             <p class="business__agent">Agent Name: ${agentObject.firstName} ${agentObject.lastName} </p>
             <p class="business__address">Address: ${businessObject.addressStreet}</p>
             <p class="business__address">City/Zip: ${businessObject.addressCity}, ${businessObject.addressStateCode} ${businessObject.addressZipCode}</p>
-            <p class="business__orders"> <ul>${businessObject.orders.map((order) => `<li>${order}</li>`).join("")}</ul>
+            <p class="business__orders"> <ul><strong>Orders</strong>${businessObject.orders.map((order) => `<li>${order}</li>`).join("")}</ul>
         </section>
     `
 }
